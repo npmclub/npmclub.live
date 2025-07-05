@@ -336,7 +336,9 @@
 </head>
 <body>
   <header>
-    <img src="images/npm-octocat.png" alt="npmclub logo" />
+    <a href="index.html">
+      <img src="images/npm-octocat.png" alt="npmclub logo" style="cursor:pointer;" />
+    </a>
   </header>
   <section>
     <div id="content">
@@ -368,7 +370,7 @@
 
       <div class="footer">
         <p>
-          npmclub is a free and <a href="#" style="color: #cb3837;">open source</a> project.
+          npmclub is a free and <a href="https://github.com/npmclub/npmclub" style="color: #cb3837;">open source</a> project.
         </p>
       </div>
     </div>
@@ -426,7 +428,7 @@
       let code = document.getElementById('secretCode').value.trim().toLowerCase();
       if (code === 'open sesame') {
         showHidden(
-          '✨ Welcome, mischievous dev! Here’s a sneak peek: <a href="https://github.com/npmclub" target="_blank" rel="noopener noreferrer">npmclub on GitHub</a>'
+          '✨ Welcome, mischievous dev! Here’s a sneak peek: <a href="https://github.com/npmclub/npmclub" target="_blank" rel="noopener noreferrer">npmclub on GitHub</a>'
         );
       } else if (code === 'npmclub') {
         showHidden('👾 You’re in the club! Stay tuned for more surprises.');

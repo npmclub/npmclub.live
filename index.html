@@ -1,50 +1,51 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<title>npmhub • Browser extension for GitHub and npm</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="A browser extension for exploring npm dependencies on GitHub repos.">
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700">
-<header>
-	<img src="images/npm-octocat.png">
-</header>
-<section>
-	<div id="content">
-		<h2>Find out what npm modules the cool kids are using.</h2>
-		<p>npmhub is a browser extension that helps you discover new npm modules while browsing
-			github.com. It notices when you’re browsing a repo with a package.json in it. If there are any <code>dependencies</code>
-			or <code>devDependencies</code> listed therein, npmhub fetches each module’s metadata from the npm registry and
-			displays it right on the GitHub page, just below the README. Here’s an example:
-		</p>
-		<noscript>
-			<img class="screenshot" src="images/chrome.png">
-		</noscript>
-		<script>
-			var browser = 'chrome';
-			if (navigator.userAgent.indexOf('Chrome') > 0) {
-				// Intentionally left empty
-			} else if (navigator.userAgent.indexOf('Safari') > 0) {
-				browser = 'safari';
-			} else if (navigator.userAgent.indexOf('Firefox') > 0) {
-				browser = 'firefox';
-			}
-			document.write('<img class="screenshot" src="images/' + browser + '.png">')
-		</script>
-		<div class="footer">
-			<p class="spacey">
-				<a class="button" href="https://chrome.google.com/webstore/detail/npmhub/kbbbjimdjbjclaebffknlabpogocablj">
-					For Google Chrome
-				</a>
-				<a class="button" href="coming-soon.html">
-					For Firefox
-				</a>
-				<a class="button" href="coming-soon.html">
-					For Safari
-				</a>
-			</p>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>npmhub • Browser extension for GitHub and npm</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="A browser extension for exploring npm dependencies on GitHub repos.">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700">
+</head>
+<body>
+	<header>
+		<img src="images/npm-octocat.png" alt="npmhub Octocat">
+	</header>
+	<section>
+		<div id="content">
+			<h2>Find out what npm modules the cool kids are using.</h2>
 			<p>
-				npmhub is a free and <a href="https://github.com/npmhub/npmhub">open source</a> project.
+				npmhub is a browser extension that helps you discover new npm modules while browsing
+				github.com. It notices when you’re browsing a repo with a package.json in it. If there are any <code>dependencies</code>
+				or <code>devDependencies</code> listed therein, npmhub fetches each module’s metadata from the npm registry and
+				displays it right on the GitHub page, just below the README. Here’s an example:
 			</p>
+			<noscript>
+				<img class="screenshot" src="images/chrome.png" alt="Screenshot">
+			</noscript>
+			<script>
+				var browser = 'chrome';
+				if (navigator.userAgent.indexOf('Chrome') > 0) {
+					// Intentionally left empty
+				} else if (navigator.userAgent.indexOf('Safari') > 0) {
+					browser = 'safari';
+				} else if (navigator.userAgent.indexOf('Firefox') > 0) {
+					browser = 'firefox';
+				}
+				document.write('<img class="screenshot" src="images/' + browser + '.png" alt="Screenshot">');
+			</script>
+			<div class="footer"></div>
+				<p class="spacey">
+					<a class="button" href="coming-soon.html">For Google Chrome</a>
+					<a class="button" href="coming-soon.html">For Firefox</a>
+					<a class="button" href="coming-soon.html">For Safari</a>
+				</p>
+				<p>
+					npmclub is a free and <a href="https://github.com/npmclub/npmclub">open source</a> project.
+				</p>
+			</div>
 		</div>
-	</div>
-</section>
+	</section>
+</body>
+</html>
