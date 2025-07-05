@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>npmclub • Coming Soon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="npmclub is coming soon. Stay tuned for something awesome!" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" />
+  <style>
+    *,
+    :after,
+    :before {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'PT Sans', Helvetica Neue, Helvetica, Arial, sans-serif;
+      background: #cb3837;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      padding: 40px 20px 30px;
+      background: #fff;
+      border-bottom-left-radius: 24px;
+      border-bottom-right-radius: 24px;
+      box-shadow: 0 4px 24px 0 rgba(31, 38, 135, 0.08);
+      user-select: none;
+    }
+
+    header img {
+      display: block;
+      margin: auto;
+      width: 70vmin;
+      max-width: 30vh;
+      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.10));
+      transition: transform 0.3s;
+      cursor: default;
+    }
+    header img:hover {
+      transform: scale(1.05) rotate(-3deg);
+    }
+
+    section {
+      background: #cb3837;
+      color: #fff;
+      flex-grow: 1;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 50px;
+    }
+
+    #content {
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      padding: 48px 32px 60px;
+      min-width: 320px;
+      max-width: 520px;
+      text-align: center;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10);
+      animation: popin 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      user-select: none;
+    }
+
+    @keyframes popin {
+      0% {
+        transform: scale(0.85) translateY(40px);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .coming-soon-highlight {
+      font-weight: bold;
+      color: #cb3837;
+      font-size: 30px;
+      margin-bottom: 18px;
+      display: block;
+      letter-spacing: 1.2px;
+      text-shadow: 0 2px 8px #f2b6b6;
+      animation: pulse 1.5s infinite alternate;
+      cursor: pointer;
+      user-select: none;
+      transition: color 0.3s ease;
+    }
+
+    .coming-soon-highlight:hover {
+      color: #a42c2b;
+      text-shadow: 0 4px 18px #a42c2b;
+    }
+
+    @keyframes pulse {
+      0% {
+        text-shadow: 0 2px 8px #f2b6b6;
+      }
+      100% {
+        text-shadow: 0 4px 16px #cb3837;
+      }
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 22px;
+      color: #cb3837;
+      letter-spacing: 0.6px;
+    }
+
+    .coming-soon-message {
+      font-size: 18px;
+      line-height: 1.5;
+      color: #333;
+      margin-bottom: 28px;
+      font-weight: 400;
+      user-select: text;
+    }
+
+    /* New joyful hint message */
+    .joyful-hint {
+      font-size: 16px;
+      color: #a42c2b;
+      font-weight: 600;
+      margin-bottom: 30px;
+      background: #ffeaea;
+      border-radius: 12px;
+      padding: 14px 20px;
+      box-shadow: 0 2px 10px rgba(164, 44, 43, 0.3);
+      user-select: none;
+      cursor: default;
+      letter-spacing: 0.5px;
+      line-height: 1.4;
+      font-style: italic;
+      transition: background 0.3s ease;
+    }
+    .joyful-hint:hover {
+      background: #f8d4d4;
+    }
+
+    .footer {
+      margin-top: 40px;
+      text-align: center;
+      user-select: none;
+    }
+
+    .footer p {
+      color: #cb3837;
+      font-size: 15px;
+      margin: 0 0 10px 0;
+    }
+
+    .footer a.button {
+      display: inline-block;
+      color: #fff;
+      background: #cb3837;
+      padding: 12px 18px;
+      margin: 10px 6px;
+      line-height: 1;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: bold;
+      transition: background 0.2s, transform 0.2s;
+      border: none;
+      box-shadow: 0 2px 8px 0 rgba(31, 38, 135, 0.10);
+      user-select: none;
+    }
+
+    .footer a.button:hover {
+      background: #a42c2b;
+      transform: translateY(-2px) scale(1.05);
+    }
+
+    .footer a {
+      color: #cb3837;
+      text-decoration: underline;
+    }
+
+    /* Fun animated npm package icons */
+    .npm-packages {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 24px;
+      margin-top: 8px;
+    }
+    .npm-package {
+      width: 40px;
+      height: 40px;
+      background: #cb3837;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 22px;
+      font-weight: bold;
+      box-shadow: 0 2px 10px 0 rgba(31, 38, 135, 0.12);
+      animation: float 2.5s ease-in-out infinite alternate;
+      cursor: pointer;
+      transition: background 0.25s, transform 0.25s;
+      user-select: none;
+      filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
+    }
+    .npm-package:nth-child(2) {
+      animation-delay: 0.5s;
+    }
+    .npm-package:nth-child(3) {
+      animation-delay: 1s;
+    }
+    .npm-package:nth-child(4) {
+      animation-delay: 1.5s;
+    }
+
+    .npm-package.unlocked {
+      background: #fff;
+      color: #cb3837;
+      transform: scale(1.3) rotate(-10deg);
+      box-shadow: 0 0 0 5px #cb3837, 0 4px 12px 0 rgba(31, 38, 135, 0.15);
+      z-index: 2;
+      filter: drop-shadow(0 0 6px #cb3837);
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-14px);
+      }
+    }
+
+    /* Hidden message styling */
+    .hidden-message {
+      display: none;
+      margin-top: 18px;
+      font-size: 16px;
+      color: #cb3837;
+      background: #ffeaea;
+      border-radius: 10px;
+      padding: 14px 20px;
+      box-shadow: 0 2px 10px 0 rgba(31, 38, 135, 0.12);
+      animation: fadein 0.7s;
+      user-select: text;
+      word-break: break-word;
+    }
+    @keyframes fadein {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Secret code input styling */
+    .secret-input {
+      display: none;
+      margin: 18px auto 0 auto;
+      text-align: center;
+    }
+    .secret-input input {
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: 2px solid #cb3837;
+      font-size: 16px;
+      margin-right: 10px;
+      outline: none;
+      width: 180px;
+      font-weight: 600;
+      transition: border-color 0.3s;
+    }
+    .secret-input input:focus {
+      border-color: #a42c2b;
+      box-shadow: 0 0 8px #a42c2b;
+    }
+    .secret-input button {
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: none;
+      background: #cb3837;
+      color: #fff;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+      box-shadow: 0 2px 10px rgba(164, 44, 43, 0.4);
+    }
+    .secret-input button:hover {
+      background: #a42c2b;
+      transform: translateY(-2px) scale(1.05);
+    }
+
+    @media (max-width: 700px) {
+      header img {
+        width: 100px;
+      }
+      #content {
+        padding: 32px 16px 50px;
+        min-width: 0;
+        max-width: 95vw;
+      }
+      .coming-soon-highlight {
+        font-size: 24px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      .coming-soon-message,
+      .joyful-hint {
+        font-size: 15px;
+      }
+      .npm-package {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/npm-octocat.png" alt="npmclub logo" />
+  </header>
+  <section>
+    <div id="content">
+      <span class="coming-soon-highlight" id="highlight" title="Click me 5 times to unlock a secret!">Coming Soon</span>
+      <h2>npmclub is almost here!</h2>
+
+      <div class="joyful-hint" title="Hint: Try clicking the icons below in the right order or the headline!">
+        🕵️‍♂️ Psst... devs, secrets await! Can you unlock them?
+      </div>
+
+      <div class="npm-packages" aria-label="Interactive npm package icons">
+        <div class="npm-package" data-secret="npm" title="Click me!">📦</div>
+        <div class="npm-package" data-secret="club" title="Click me!">🔗</div>
+        <div class="npm-package" data-secret="dev" title="Click me!">⚡</div>
+        <div class="npm-package" data-secret="hub" title="Click me!">🧩</div>
+      </div>
+
+      <div class="coming-soon-message" aria-live="polite">
+        We're working hard to bring you<br />
+        <b>something awesome!</b>
+      </div>
+
+      <div class="secret-input" id="secretInput" role="region" aria-label="Secret code input">
+        <input type="text" id="secretCode" placeholder="Enter secret code..." aria-label="Enter secret code" />
+        <button onclick="checkSecret()" aria-label="Unlock secret code">Unlock</button>
+      </div>
+
+      <div class="hidden-message" id="hiddenMessage" role="alert" aria-live="assertive"></div>
+
+      <div class="footer">
+        <p>
+          npmclub is a free and <a href="#" style="color: #cb3837;">open source</a> project.
+        </p>
+      </div>
+    </div>
+  </section>
+  <script>
+    // Console hints and solutions for mischievous devs!
+    console.log('%c👋 Hey curious dev!', 'color:#cb3837;font-size:1.2em;font-weight:bold;');
+    console.log('%cThere are hidden secrets on this page!', 'color:#a42c2b;font-size:1.1em;');
+    console.log('%cTry these:', 'color:#cb3837;font-weight:bold;');
+    console.log('- Click the "Coming Soon" headline 5 times to reveal a secret code input.');
+    console.log('- Click the four package icons in this order: 📦🔗⚡🧩');
+    console.log('- Enter one of these secret codes: "open sesame" or "npmclub"');
+    console.log('%cSolutions:', 'color:#cb3837;font-weight:bold;');
+    console.log('• Secret code order: [npm, club, dev, hub]');
+    console.log('• Secret codes: "open sesame" (shows GitHub link), "npmclub" (shows a club message)');
+    console.log('%cEnjoy exploring! 🚀', 'color:#cb3837;font-size:1.1em;');
+
+    // Mischievous: Click the "Coming Soon" headline 5 times to reveal a secret input
+    let highlight = document.getElementById('highlight');
+    let clickCount = 0;
+    highlight.addEventListener('click', function () {
+      clickCount++;
+      if (clickCount === 5) {
+        document.getElementById('secretInput').style.display = 'block';
+        highlight.textContent = '🔓 Secret Unlocked!';
+        highlight.style.color = '#a42c2b';
+        highlight.title = 'Secret input unlocked! Enter a secret code.';
+      }
+    });
+
+    // Mischievous: Click npm package icons in a certain order to unlock a message
+    const secretOrder = ['npm', 'club', 'dev', 'hub'];
+    let userOrder = [];
+    let packages = document.querySelectorAll('.npm-package');
+    packages.forEach((pkg) => {
+      pkg.addEventListener('click', function () {
+        userOrder.push(pkg.getAttribute('data-secret'));
+        pkg.classList.add('unlocked');
+        setTimeout(() => pkg.classList.remove('unlocked'), 600);
+        if (userOrder.length === secretOrder.length) {
+          if (userOrder.join('') === secretOrder.join('')) {
+            showHidden(
+              '🎉 You found the npmclub secret! Early access coming soon... 🚀'
+            );
+          } else {
+            showHidden("Oops! That wasn't the right combo. Try again!");
+          }
+          userOrder = [];
+        }
+      });
+    });
+
+    // Secret code input
+    function checkSecret() {
+      let code = document.getElementById('secretCode').value.trim().toLowerCase();
+      if (code === 'open sesame') {
+        showHidden(
+          '✨ Welcome, mischievous dev! Here’s a sneak peek: <a href="https://github.com/npmclub" target="_blank" rel="noopener noreferrer">npmclub on GitHub</a>'
+        );
+      } else if (code === 'npmclub') {
+        showHidden('👾 You’re in the club! Stay tuned for more surprises.');
+      } else {
+        showHidden("Nope, that's not it. Try another code!");
+      }
+    }
+
+    function showHidden(msg) {
+      let hidden = document.getElementById('hiddenMessage');
+      hidden.innerHTML = msg;
+      hidden.style.display = 'block';
+      setTimeout(() => {
+        hidden.style.display = 'none';
+      }, 7000);
+    }
+  </script>
+</body>
+</html>
